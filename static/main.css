@@ -1,0 +1,88 @@
+/*BACKGROUND*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    height: 100%;
+}
+.name-box {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end; /* Align text to the bottom */
+}
+.name {
+    font-size: 10vw;
+    font-family:'Times New Roman', Times, serif;
+}
+.box {
+    width: 60%;
+    height: 75vh;
+    margin: auto;
+    border-top: 16px solid black;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    overflow: scroll;
+}
+.box-scroll {
+    width: 100%;
+    height: auto;
+    border: 16px solid black;
+    border-top: none;
+    overflow: scroll;
+    background-color: white;
+    
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+.hello-text {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+.post-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.post-preview {
+    font-family:'Times New Roman', Times, serif;
+}
+.post-header {
+    margin-bottom: 15px;
+}
+.post-title {
+    font-size: 24px;
+    margin: 0;
+}
+.post-date {
+    color: #888;
+    font-size: 14px;
+}
+.post-content .post-excerpt {
+    font-size: 16px;
+    color: #333;
+}
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+.featured-img {
+    width: 100%;
+    height: auto;
+}
+
+
+.caption {
+    font-size: small;
+    color: black;
+}
+
+a.title {
+    font-size: large;
+    color: black;
+}
