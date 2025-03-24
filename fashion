@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- REQs -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+ 
+     <!-- JQUERY -->
+     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/static/main.css">
+
+
+     <style>
+        .tabs-container {
+            position: absolute;
+            top: 20px;
+            right: -80px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .tab {
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+        }
+        .tab:hover {
+            background: #f8f9fa;
+        }
+     </style>
+</head>
+<body>
+    <div class="name-box">
+        <div class="name">Vasilisa Ioukhnovets</div>
+    </div>
+    <div class="everything">
+    <div class="box">
+        <div class="box-scroll">
+            <div class="post-feed">
+                <!-- LOOP THROUGH POSTS AND LOAD -->
+                
+                <div class="featured-img">
+                    <img src="/uploads/img/101123.jpg" alt="Post Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="post-preview">
+                    <div class="caption"></div>
+                    <a class="title" href="/post/101123.md"><p><strong>Loro Piana’s Ready For Cocooning Season</strong></p></a>
+                    <div class="subtitle"><p><strong>As in literally swaddling you in cashmere.</strong></p></div>
+                    <div><p>What’s a better way to keep your toes warm this winter than to wear socks made from the world’s finest cashmere? Or maybe a super soft sweatsuit is more your speed? For Loro Piana, that’s the intention behind their cozy Cocooning Collection, a line of incredibly luxurious knitted pieces that first launched last year. It returns this week and this time the brand is also introducing a men’s line as well. Made to get you through the coldest months, these pieces are made from vicuña goats that hail from the Andres and are beloved for their ultrafine, high quality cashmere. </p>
+<p>Named Cocooning, because who wouldn’t want to swaddle themselves in cashmere once the temperatures drop, the line features elegant pieces that work equally as well whether you’re hunkering down by the fire or headed out in the cold. For her, you’ll find cardigans, shorts, wool jumpsuits and a shrug. For him, you’ll be able to get everything from sweaters to pants. The collection also includes socks and legwarmers as well, but the star accessories are definitely the slippers. Made from a fine silk yarn named Cashfur, they look and feel like big fluffy wearable clouds. With a palette of tans, natural whites, and burgundies (certain yarns are left undied to preserve their natural beauty) this collection is the epitome of the Loro Piana aesthetic; never look like you’re trying too hard. </p>
+<p>Shop the Loro Piana Cocooning Collection <a href="http://loropiana.com/">online</a> and select stores beginning October 12th</p></div>  <!-- Display preview as HTML -->
+                </div>
+                
+                <div class="featured-img">
+                    <img src="/uploads/img/090923.jpg" alt="Post Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="post-preview">
+                    <div class="caption"></div>
+                    <a class="title" href="/post/090923.md"><p><strong>See Bottega Veneta’s Winter Fanzine</strong></p></a>
+                    <div class="subtitle"><p><strong>The collectible fanzine is a look into designer Matthieu Blazy’s moodboard.</strong></p></div>
+                    <div><p>Forget back to school shopping, the only book you need this year is Bottega Veneta’s newest fanzine. The fashion textbook, if you will, is an intimate look into the beautiful textures, woven leather, and pops of color that is the <a href="https://www.bottegaveneta.com/en-us/inside-bottega/collections/winter-23">Winter 23 collection</a>. Beginning with creative director Matthieu Blazy’s debut collection last year, the brand has released these collectible mementos of their collections that also happen to look very good on coffee tables. </p>
+<p>Last season, the zine was all about Blazy’s muse <a href="https://usa.10magazine.com/a-kate-moss-fanzine-bottega-veneta-style/">Kate Moss</a>, who wore one of the most memorable looks of the show. This winter, Blazy opted to commemorate the last of the ‘Italia trilogy,’ which subverts silhouette and plays with fabrics. Featuring campaign outtakes from this winter’s cinematic imagery, the book also has a few surprises, namely original fashion sketches by the British Cypriot designer Husseign Chalayan. Commissioned by Blazy, the art coupled with behind the scenes photos of longtime brand favorite Gaetano Pesce’s creations, it’s Bottega Veneta’s take on the moodboard. </p>
+<p>Consisting of a Stracciatella-inspired patterned set, it’s reminiscent of a composition notebook, fitting for the curation of imagination and artistry inside. Perhaps, it may spark a bit of your own creative imagination as well. See for yourself below.</p></div>  <!-- Display preview as HTML -->
+                </div>
+                
+                <div class="featured-img">
+                    <img src="/uploads/img/092123.jpg" alt="Post Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="post-preview">
+                    <div class="caption"><p><em>Images Courtesy of Burberry.</em></p></div>
+                    <a class="title" href="/post/092123.md"><p><strong>Window Shop Burberry’s Winter Collection Now</strong></p></a>
+                    <div class="subtitle"><p><strong>Saks Fifth Avenue is the first retail partner to welcome Daniel Lee’s debut.</strong></p></div>
+                    <div><p>If you’re in New York City, you might notice the windows of <a href="https://www.saksfifthavenue.com/">Saks Fifth Avenue</a> look a little different this week. In honor of Daniel Lee’s debut Winter 2023 collection for <a href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwiIieae77qBAxUDT0cBHUgtBH8YABAAGgJxdQ&amp;ase=2&amp;gclid=CjwKCAjwsKqoBhBPEiwALrrqiKBIGcqtUkFgxWjhXJvqPb2Hj29hNhDdtFx9It-asWE6zyo68SOlthoCOZAQAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESaOD2Dhcri7vRjruEY3nNK6lH6QUolqXJjZnWC2x6TXTxTQj3Z8gyjQwLOKty5lJzqRtZPzNfY3ZTEZjI1Hhz6Xa-RYmCm3TdTKoPudgFltYlCn2YeMVwrWjQWlKcrBJVmI0VTu7kgVDl&amp;sig=AOD64_3LhrhxlxwMEfKF0qy6tnuk6NuwzA&amp;q&amp;nis=4&amp;adurl&amp;ved=2ahUKEwjmptqe77qBAxXQF1kFHQxbC9cQ0Qx6BAgOEAE">Burberry</a>, the department store has created a series of window installations featuring floral sculptures mixed in with pieces from the line including womenswear, menswear, shoes, bags, and other accessories. Not bad for a warm welcome.</p>
+<p>Saks is the first partner to introduce the collection, so of course they had to go all out. Meant to be an immersive experience, the first thing you’ll notice is the bright yellow shade that fills the space. Called mimosa, it’s their seasonal hue. Also worth noting is the floral motif. As seen repeatedly in Lee’s debut, it’s brought to life inside the store. Rose sculptures dot the space, with shelves for products nestled within, as if your new handbag suddenly bloomed to life. If you want to see this in person, you can check it out through September 26th, or browse the collection <a href="https://www.saksfifthavenue.com/brand/burberry">online</a> and at select Saks Fifth Avenue <a href="https://www.saksfifthavenue.com/locations">stores</a>.</p></div>  <!-- Display preview as HTML -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li><a href="fashion">FASHION</a></li>
+        <li><a href="/#">ART</a></li>
+    </ul>
+</div>
+</body>
+</html>
