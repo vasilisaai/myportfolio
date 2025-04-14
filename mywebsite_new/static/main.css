@@ -1,0 +1,42 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+.logo img {
+    padding-top: 10px;
+    height: 30%;
+    max-height: 190px;
+    width: auto;
+}
+
+.secondary-header {
+    padding-top: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.blurb {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.blurb a {
+    color: black;
+    text-decoration: underline; /* Underlines the link */
+    text-decoration-thickness: 1.5px; /* Makes the underline thinner */
+    text-decoration-color: red; /* Makes the underline thinner */
+}
+
+.blurb a:hover {
+    color: red;
+    text-decoration-thickness: 1.5px; /* Makes the underline thinner */
+    text-decoration-color: red; /* Makes the underline thinner */
+}

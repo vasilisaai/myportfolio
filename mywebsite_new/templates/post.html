@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+
+{% block content %}
+<style>
+    #logo-box{
+        height: 60px;
+        align-items: flex-start;
+        border: red solid;
+    }
+    #logo-image {
+        height: 50px;
+    }
+    .secondary-header {
+        font-family: 'Oswald', sans-serif;
+        font-size: 25px;
+    }
+    .post-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 20px;
+        text-align: left;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .featured-img img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .post-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    .post-date {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        font-weight: lighter;
+    }
+    .post-caption {
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+    .post-body {
+        text-align: left;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: black;
+
+    }
+    .post-body a {
+        color: black;
+        text-decoration: underline;
+    }
+    #back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    }
+
+    #back-button:focus {
+        outline: none;
+    }
+    #back-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+</style>
+<div class="container text-center" id="smaller">
+    <a class = "secondary-header" href="/{{ request.path.split('/')[1] }}/" style="text-decoration: none; color: inherit;">{{ header_text }}</a>
+</div>
+<hr> 
+
+<div class = "all" style="align-items: center; justify-content: center; justify-items: center;">
+    <div class="post-title">{{ post.title | striptags }}
+        {% set raw_date = post.img[:-4] %}
+        {% set formatted_date = raw_date[:2] ~ '.' ~ raw_date[2:4] ~ '.' ~ raw_date[4:] %}
+        <div class="post-date" >{{ formatted_date }}</div>
+    </div>
+
+    <div class="post-container">
+        <div class="featured-img">
+            <img src="{{ url_for('get_image', filename=post.img) }}" alt="Post Image">
+        </div>
+        <div class="post-caption">{{ post.caption | striptags }}</div>
+    
+    
+    
+        {% if post.subtitle %}
+            <div class="post-body"><strong>{{ post.subtitle | striptags }}</strong></div>
+        {% endif %}
+    
+        <div class="post-body">{{ post.preview_html | safe }}</div>
+    </div>
+</div>
+
+{% endblock %}
+

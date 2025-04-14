@@ -1,0 +1,81 @@
+{% extends "index.html" %}
+
+{% block content %}
+<style>
+    #logo-box{
+        height: 60px;
+        align-items: flex-start;
+        border: red solid;
+    }
+    #logo-image {
+        height: 50px;
+    }
+    .subheader {
+        text-align: center;
+        width: 50vw;
+        min-width: 500px;
+        font-size: xx-large;
+    }
+  .post-feed {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .post {
+    font-size: small;
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+  }
+  .featured-img img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+  }
+  .title {
+    color: #000;
+    text-decoration: none;
+}
+  .title:hover {
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px; 
+    text-decoration-color: red;
+  }
+</style>
+
+<div class="secondary-header container text-center">
+    <h1>{{ header_text }}</h1>
+</div>
+
+<div class="subheader container">
+    {{ subheader_text }}
+</div>
+<hr> 
+<div class="post-feed container">
+    {% for post in posts %}
+        <div class="post row align-items-center">
+            <div class="col-6">
+                <a class="title" href="{{ request.path }}post/{{ post.filename }}">{{ post.title | striptags }}</a>
+            </div>
+            <div class="col-3">
+                <div class="publication" style="font-style: italic; margin: 8px;">
+                    <div>{% set raw_date = post.img[:-4] %}  {# removes ".jpg" #}
+                        {% set formatted_date = raw_date[:2] ~ '.' ~ raw_date[2:4] ~ '.' ~ raw_date[4:] %}
+                        <div>{{ formatted_date }}</div>
+                    </div>
+                    <div>{{ publication }}</div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="featured-img">
+                    <img src="{{ url_for('get_image', filename=post.img) }}" alt="Post Image">
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
